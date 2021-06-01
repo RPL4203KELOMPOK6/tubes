@@ -1,9 +1,7 @@
 /* FONT IMPORT */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,700;1,400&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
 body{
   font-family: 'Poppins', sans-serif;
   background-color: #F7F7F7;  
@@ -22,11 +20,24 @@ body{
 .primary-bg{
   background-color: #6A7798;
 }
+.primary-color{
+  color: #6A7798;
+}
 .dark-color{
   color: #404040;
 }
+
 .text-gray{
   color: #696969 !important;
+}
+.text-red{
+  color: #EF3F3F;
+}
+.red-bg{
+  background-color: #EF3F3F;;
+}
+.bg-black{
+  background-color: black;
 }
 .add-address-bg{
   background-color: #6384C5;
@@ -44,6 +55,32 @@ body{
   position: absolute;
   width: 100%;
   margin : auto ;
+}
+/* ADD ARROW PADA DROPDOWN PADA NAV */
+.dropdown-menu::before {
+  border-bottom: 9px solid rgba(0, 0, 0, 0.2);
+  border-left: 9px solid rgba(0, 0, 0, 0);
+  border-right: 9px solid rgba(0, 0, 0, 0);
+  content: "";
+  display: inline-block;
+  right: 5%; /* position */
+  position: absolute;
+  top: -8px;
+}
+
+.dropdown-menu::after {
+  border-bottom: 8px solid #FFFFFF;
+  border-left: 9px solid rgba(0, 0, 0, 0);
+  border-right: 9px solid rgba(0, 0, 0, 0);
+  content: "";
+  display: inline-block;
+  right: 5%; /* position */
+  position: absolute;
+  top: -7px;
+}
+.dropdown-menu.category-menu::after{
+  border-bottom: 8px solid #6A7798;
+
 }
 .nav-item .nav-link{
   padding: 0.5rem;
@@ -200,7 +237,10 @@ text-align: right;
   color: black;
 }
 /* WAVE */
-
+.dropdown-wave{
+  top: 30px;
+  right: 130px;
+}
 .top-right{
   top: 0;
   right: 0;
@@ -341,6 +381,26 @@ input[type=checkbox]:checked:after {
   color: white;
   font-weight: bold;
 }
+/* Icon inside form */
+.input-container {
+  position: relative;
+}
+
+.input-container > img.key-icon {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+}
+.input-container > img.visibility-icon {
+  position: absolute;
+  top: 9px;
+
+  right: 20px !important;
+}
+.input-container > input {
+  padding-left: 40px;
+  padding-right: 60px;
+}
 /* NUMBER CART */
 .discount-form{
   padding-left: 2.2rem;
@@ -426,7 +486,49 @@ input[type=number] {
   height: 120px;
   object-fit: cover;
 }
+
+/* PESANAN
+COLLAPSE TOGGLE ICON CHANGE */
+
+.collapse-container[aria-expanded="false"] .fa-chevron-down {
+  transition: .3s transform ease-in-out;
+  transform: rotate(0deg);
+
+}
+.collapse-container[aria-expanded="true"] .fa-chevron-down {
+  transition: .3s transform ease-in-out;
+
+  transform: rotate(180deg);
+}
+/* number circle list */
+.circle-number {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background: #c5c5c5;
+  color: white;
+  line-height: 20px;
+  text-align: center;
+  font-size: 10px;
+}
 /* HELPER */
+
+/* SIGN IN PAGE */
+.email-label{
+  position: absolute;
+  margin-top: -8px;
+  margin-left: 10px;
+  background-color: white;
+  z-index: 2;
+  font-size: 12px;
+  color: #4B97BC;
+}
+/*  */
+/* TRANSAKSI PAGE */
+.method-payment{
+  min-width: 180px;
+}
+/*  */
 .register-button{
   border: 2px solid #00B0D7;
   padding: 0.5rem !important;
@@ -457,16 +559,16 @@ ul{
 .cursor-pointer{
   cursor: pointer;
 }
-.text-red{
-  color: #EF3F3F;
-}
+
 .border-content{
   border-top: 2px solid #626262;
 }
 .w-responsive-75{
   width: 100%;
 }
-
+.w-responsive-50{
+  width: 100%;
+}
 .photo-profile{
   width: 50px !important;
   height: 50px;
@@ -503,6 +605,11 @@ p{
   border: 0px;
 }
 /* ICON */
+.produk-pesan-icon{
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+}
 .discount-icon{
   
   position: relative;
@@ -513,6 +620,10 @@ p{
   background-color: white;
   
   border: 0px;
+}
+.bank-icon{
+  width: 30px;
+  height: 30px;
 }
 .search-icon{
   background-color: transparent;
@@ -572,6 +683,9 @@ p{
     }
     #carousel-review .owl-dots{
       transform: translateY(-25px);
+    }
+    .w-responsive-50{
+      width: 50%;
     }
     .w-responsive-75{
       width: 75%;

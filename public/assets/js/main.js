@@ -64,7 +64,7 @@ $('#product-carousel').owlCarousel({
 // MEMBUKA DROPDOWN PILIH KEMASAN DI NAVBAR
 $(window).on("load resize", function() {
  if (this.matchMedia("(min-width: 768px)").matches) {
-   $('.dropdown').hover(
+   $('.profile-nav.dropdown').hover(
        function() {
            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn();
        },
@@ -73,7 +73,7 @@ $(window).on("load resize", function() {
        }
    );
 
-   $('.dropdown-menu').hover(
+   $('.profile-nav.dropdown').find('.dropdown-menu').hover(
        function() {
            $(this).stop(true, true);
        },
@@ -91,4 +91,24 @@ $('#alamatutamaa').click(function(){
     $('#alamatbaruform').val('');
 });
 
+//VISIBILLITY SIGN IN PASSWORD TOGGLE
+$( ".visibility-icon" ).click(function() {
+    var inputField = $("#password-input");
+    var type = $(inputField).attr("type"); 
 
+    if( type === 'password' ){
+        $(inputField).attr("type", "text");
+      }else{
+        $(inputField).attr("type", "password");
+      } 
+});
+
+//COPY REKENING
+$( ".copyrekening" ).click(function() {
+   
+    navigator.clipboard.writeText( $("#rekening").text()).then(function () {
+        alert('Teks Berhasil di Copy')
+    }, function () {
+        alert('Teks Gagal di Copy')
+    });
+});
