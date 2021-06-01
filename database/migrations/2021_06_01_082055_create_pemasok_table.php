@@ -18,7 +18,7 @@ class CreatePemasokTable extends Migration
             $table->string('nama');
             $table->string('password');
             $table->string('email')->unique();
-            $table->varchar('phone',15);
+            $table->string('phone',15);
         });
     }
 
