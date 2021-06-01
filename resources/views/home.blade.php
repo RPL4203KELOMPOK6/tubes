@@ -10,7 +10,7 @@
         </a>
         <div class="dropdown-menu p-4" aria-labelledby="navbarDropdown">
         <div class="d-flex shadow-sm align-item-center rounded-small p-2">
-            <img src="assets/img/Ellipse 175.png" class="photo-profile rounded-circle" alt=""> <span class="text-gray ml-3 font-weight-bold"> John Doe</span>
+            <img src="assets/img/Ellipse 175.png" class="photo-profile rounded-circle" alt=""> <span class="text-gray ml-3 font-weight-bold">{{ Auth::user()->name }}</span>
         </div>
         <a href="#">
             <div  class="shadow-sm mt-2 rounded-small p-2">
@@ -27,7 +27,12 @@
             <p class="text-gray font-weight-bold">Setting</p>
             </div>
         </a>
-        <p class="text-gray font-weight-bold text-right mt-4 cursor-pointer">Logout <i class="ml-1 fa fa-sign-out-alt"></i></p>
+        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            <p class="text-gray font-weight-bold text-right mt-4 cursor-pointer">{{ __('Logout') }}<i class="ml-1 fa fa-sign-out-alt"></i></p>
+        </a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+        </form>
         </div>
     </li>
 @endsection
