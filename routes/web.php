@@ -21,3 +21,6 @@ Route::get('/coba', function () {
 
 Route::resource('pemasok', 'PemasokController');
 Route::resource('album', 'AlbumController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
