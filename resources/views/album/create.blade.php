@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="card-header">
-    <h3 class="card-title">Input Pemasok</h3>
+    <h3 class="card-title">Input Album</h3>
 </div>
 <div class="row">
     <div class="col-md-6">
