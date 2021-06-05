@@ -27,5 +27,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/pesanan', function () {
-    return view('Mentahan.cart');
+    return view('Mentahan.pesanan');
 });
