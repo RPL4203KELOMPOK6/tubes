@@ -72,6 +72,7 @@
     <img src="assets/img/Group 8901.png" class="wave w-auto d-none d-md-block position-absolute top-right" alt="">
     <img src="assets/img/Group 525.png" class="wave w-auto d-none d-md-block position-absolute bottom-left" alt="">
 
+    @foreach($album as $album)
     <div class="container pb-big">
       <h3 class="font-weight-bold pt-5">Rekomendasi Produk</h3>
       <p>Spesial untuk anda</p>
@@ -89,9 +90,9 @@
         </div>
       </div>
       <div class="row mt-5">
-        @foreach($album as $abum)
+        
         <div class="col-md-4">
-          <img src="{{asset('../image/'. $album -> gambar)}}" class="w-100" alt="">
+          <img src="{{asset('../image/'. $album->gambar)}}" class="w-100" alt="">
           <h5 class="font-weight-bold mt-4  ml-4" >{{ $album -> nama }}</h5>
           <p class="text-secondary  ml-4">{{$album -> penyanyi}}</p>
         </div>
