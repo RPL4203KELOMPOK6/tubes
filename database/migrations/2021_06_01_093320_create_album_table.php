@@ -17,6 +17,7 @@ class CreateAlbumTable extends Migration
             $table->bigIncrements('id');
             $table->string('nama');
             $table->string('penyanyi');
+            $table->string('gambar');
             $table->integer('harga');
             $table->longtext('deskripsi');
             $table->timestamps();

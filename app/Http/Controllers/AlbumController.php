@@ -44,14 +44,25 @@ class AlbumController extends Controller
     		'nama' => 'required',
             'penyanyi' => 'required',
             'harga' => 'required',
+            'gambar' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
             'deskripsi' => 'required'
     	]);
+
+        // menyimpan data file yang diupload ke variabel $file
+        $gambar = $request->file('gambar');
+ 
+		$nama_file = time()."_".$file->getClientOriginalName();
+ 
+        // isi dengan nama folder tempat kemana file diupload
+		$tujuan_upload = 'data_file';
+		$file->move($tujuan_upload,  $nama_file);
  
         Album::create([
             'pemasok_id' => $request->pemasok_id,
     		'nama' => $request->nama,
     		'penyanyi' => $request->penyanyi,
             'harga' => $request->harga,
+            'gambar' => $nama_file,
             'deskripsi' => $request->deskripsi
     	]);
  
@@ -112,4 +123,6 @@ class AlbumController extends Controller
         Album::destroy($id);
         return redirect('/album')->with('success', 'Data sukses dihapus');
     }
+ 
+
 }
