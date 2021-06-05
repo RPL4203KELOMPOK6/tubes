@@ -87,16 +87,16 @@
       <div class="row">
         <div class="col-md-4">
           <img src="assets/img/dollar.png" class=" d-block mx-auto" alt="">
-          <h4 class="text-center mt-4 font-weight-bold">Harga Terjangkau</h>
+          <h4 class="text-center mt-4 font-weight-bold">Harga Terjangkau</h4>
         </div>
         <div class="col-md-4">
           <img src="assets/img/transaction.png" class=" d-block mx-auto" alt="">
-          <h4 class="text-center mt-4 font-weight-bold">Transaksi Mudah</h>
+          <h4 class="text-center mt-4 font-weight-bold">Transaksi Mudah</h4>
 
         </div>
         <div class="col-md-4">
           <img src="assets/img/secure.png" class=" d-block mx-auto" alt="">
-          <h4 class="text-center mt-4 font-weight-bold">Transaksi Aman</h>
+          <h4 class="text-center mt-4 font-weight-bold">Transaksi Aman</h4>
         </div>
       </div>
 
