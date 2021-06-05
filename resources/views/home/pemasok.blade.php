@@ -207,13 +207,14 @@
                     <ul id="sidebarnav" class="p-t-5">
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Pemasok </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="form-basic.html" class="sidebar-link"><i class="mdi mdi-account-plus"></i><span class="hide-menu"> Add  </span></a></li>
-                                <li class="sidebar-item"><a href="form-wizard.html" class="sidebar-link"><i class="mdi mdi-folder"></i><span class="hide-menu"> Show Data </span></a></li>
+                                <li class="sidebar-item"><a href="/pemasok/create" class="sidebar-link"><i class="mdi mdi-account-plus"></i><span class="hide-menu"> Add  </span></a></li>
+                                <li class="sidebar-item"><a href="/pemasok" class="sidebar-link"><i class="mdi mdi-folder"></i><span class="hide-menu"> Show Data </span></a></li>
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-apps"></i><span class="hide-menu">Album </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="form-wizard.html" class="sidebar-link"><i class="mdi mdi-folder"></i><span class="hide-menu"> Show Data </span></a></li>
+                                <li class="sidebar-item"><a href="/album/create" class="sidebar-link"><i class="mdi mdi-account-plus"></i><span class="hide-menu"> Add </span></a></li>
+                                <li class="sidebar-item"><a href="/album" class="sidebar-link"><i class="mdi mdi-folder"></i><span class="hide-menu"> Show Data </span></a></li>
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-account-box"></i><span class="hide-menu">User </span></a>
@@ -240,7 +241,7 @@
              <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">Admin</h4>
+                        <h4 class="page-title">Pemasok</h4>
                     </div>
                 </div>
             </div>
