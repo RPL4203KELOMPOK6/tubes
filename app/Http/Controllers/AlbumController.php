@@ -108,14 +108,26 @@ class AlbumController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $album = Album::where('id', $id)->update([
-            "nama" => $request["nama"],
-            "penyanyi" => $request["penyanyi"],
-            "harga" => $request["harga"],
-            "gambar" => $request["gambar"],
-            "deskripsi" => $request["deskripsi"]
-        ]);
-
+        // $album = Album::where('id', $id)->update([
+        //     "nama" => $request["nama"],
+        //     "penyanyi" => $request["penyanyi"],
+        //     "harga" => $request["harga"],
+        //     "gambar" => $request["gambar"],
+        //     "deskripsi" => $request["deskripsi"]
+        // ]);
+        $album = Album::find($id);
+        $album->nama = $request->input('nama');
+        $album->penyanyi = $request->input('penyanyi');
+        $album->harga = $request->input('harga');
+        if ($request->hasfile('image')) {
+            $gambar = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $nama_file = time() . '.' . $extension;
+            $album->gambar = $nama_file;
+        }
+        $album->deskripsi = $request->input('deskripsi');
+        
+        
         return redirect('/album')->with('success', 'Data sukses diupdate');
     }
 

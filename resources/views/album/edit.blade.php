@@ -7,7 +7,7 @@
 <div class="row">
     <div class="col-md-6">
         <div class="card">
-            <form role="form" action="/album/{{$album->id}}" method="POST">
+            <form role="form" action="/album/{{$album->id}}" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 @method('PUT')
                 <div class="card-body">
