@@ -68,9 +68,9 @@
                         </div>
                         <dl class="row content data mt-3">
                             <dd class="col-md-3"><span class="ml-4">Nama</span></dd>
-                            <dd class="col-md-9"><span class="ml-4 ml-md-0">:</span></dd>
+                            <dd class="col-md-9"><span class="ml-4 ml-md-0">: {{ Auth::user()->name }}</span></dd>
                             <dd class="col-md-3"><span class="ml-4">Email</span></dd>
-                            <dd class="col-md-9"><span class="ml-4 ml-md-0">:</span></dd>
+                            <dd class="col-md-9"><span class="ml-4 ml-md-0">: {{ Auth::user()->email }}</span></dd>
                             <dd class="col-md-3"><span class="ml-4">No Hp</span></dd>
                             <dd class="col-md-9"><span class="ml-4 ml-md-0">:</span></dd>
                             <dd class="col-md-3"><span class="ml-4">Tanggal Lahir</span></dd>

@@ -35,7 +35,7 @@
 @section('container')
   <section class="position-relative container form-font">
     <div class="bg-white  my-5 ">
-      <h5 class="font-weight-normal border-bottom p-4"><i class="fas fa-arrow-left mr-3"></i>Pembayaran</h5>
+      <h5 class="font-weight-normal border-bottom p-4"><i class="fas fa-arrow-left mr-3"><a href="/transaksi"></i>Pembayaran</a></h5>
       <div class="border border-warning m-3 d-flex align-item-center">
         <span class="fa-stack m-3 mr-5">
           <i class="fas fa-circle text-warning fa-stack-2x"></i>

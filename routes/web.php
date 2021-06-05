@@ -26,6 +26,18 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/profile', function () {
+    return view('Mentahan.profile');
+});
+
+Route::get('/cart', function () {
+    return view('Mentahan.cart');
+});
+
 Route::get('/pesanan', function () {
     return view('Mentahan.pesanan');
+});
+
+Route::get('/transaksi', function () {
+    return view('Mentahan.transaksi');
 });

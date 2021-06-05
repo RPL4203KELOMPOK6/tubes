@@ -48,7 +48,7 @@
       </form>
       <ul class="navbar-nav">
         <li class="nav-item active mx-md-3 mx-0">
-            <a class="nav-link d-flex" href="#"><img src="assets/img/Group.png" alt=""><span class="d-block text-body mt-1 ml-2 font-weight-bold d-md-none">Cart</span></a>
+            <a class="nav-link d-flex" href="/cart"><img src="assets/img/Group.png" alt=""><span class="d-block text-body mt-1 ml-2 font-weight-bold d-md-none">Cart</span></a>
         </li>
         <li class="nav-item mx-md-3 mx-0">
             <a class="nav-link d-flex" href="#"><img src="assets/img/favorite-24px 1.png" alt=""><span class="d-block  text-body mt-1 ml-2 font-weight-bold d-md-none">Favorite</span></a>
@@ -64,7 +64,7 @@
 
   <ul class="nav justify-content-center primary-bg">
     <li class="nav-item mx-md-4">
-      <a class="nav-link  text-white font-weight-bold" href="#">Beranda</a>
+      <a class="nav-link  text-white font-weight-bold" href="/home">Beranda</a>
     </li>
     <li class="nav-item mx-md-4">
       <a class="nav-link  text-white font-weight-bold dropdown-toggle "  data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" href="#">Kategori</a>
