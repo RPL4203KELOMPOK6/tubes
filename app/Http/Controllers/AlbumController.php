@@ -45,23 +45,23 @@ class AlbumController extends Controller
     
     public function store(Request $request)
     {
+        // dd($request->gambar);
         $this->validate($request,[
             'pemasok_id' => 'required',
     		'nama' => 'required',
             'penyanyi' => 'required',
             'harga' => 'required',
-            'gambar' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
+            'gambar' => 'mimes:jpeg,png,jpg|max:5048',
             'deskripsi' => 'required'
     	]);
-
         // menyimpan data file yang diupload ke variabel $file
         $gambar = $request->file('gambar');
  
-		$nama_file = time()."_".$file->getClientOriginalName();
+		$nama_file = time()."_".$gambar->getClientOriginalName();
  
         // isi dengan nama folder tempat kemana file diupload
-		$tujuan_upload = 'data_file';
-		$file->move($tujuan_upload,  $nama_file);
+		$tujuan_upload = 'image';
+		$gambar->move($tujuan_upload,  $nama_file);
  
         Album::create([
             'pemasok_id' => $request->pemasok_id,

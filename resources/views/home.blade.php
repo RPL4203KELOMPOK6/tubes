@@ -89,22 +89,23 @@
         </div>
       </div>
       <div class="row mt-5">
-        <div class="col-md-4">
-          <img src="assets/img/examine1.png" class="w-100" alt="">
-          <h5 class="font-weight-bold mt-4 ml-4">BE</h5>
-          <p class="text-secondary  ml-4">BTS</p>
-        </div>
-        <div class="col-md-4">
-          <img src="assets/img/examine2.png" class="w-100" alt="">
-          <h5 class="font-weight-bold mt-4  ml-4">Lovesick Girls</h5>
-          <p class="text-secondary  ml-4">Blackpink</p>
-        </div>
-        @foreach($album as $key => $album)
-        <div class="col-md-4">
-          <img src="assets/img/examine3.png" class="w-100" alt="">
-          <h5 class="font-weight-bold mt-4  ml-4" >{{ $album -> nama }}</h5>
-          <p class="text-secondary  ml-4">{{$album -> penyanyi}}</p>
-        </div>
+        @foreach($album as $abum)
+          <div class="col-md-4">
+            <img src="/image/{{ $album -> gambar }}" class="w-100" alt="">
+            <h5 class="font-weight-bold mt-4  ml-4" >{{ $album -> nama }}</h5>
+            <p class="text-secondary  ml-4">{{$album -> penyanyi}}</p>
+          </div>
+          <div class="col-md-4">
+            <img src="/image/{{ $album -> gambar }}" class="w-100" alt="">
+            <h5 class="font-weight-bold mt-4  ml-4">{{ $album -> nama }}</h5>
+            <p class="text-secondary  ml-4">{{$album -> penyanyi}}</p>
+          </div>
+          @foreach($album as $key => $album)
+          <div class="col-md-4">
+            <img src="/image/{{ $album -> gambar }}" class="w-100" alt="">
+            <h5 class="font-weight-bold mt-4  ml-4" >{{ $album -> nama }}</h5>
+            <p class="text-secondary  ml-4">{{$album -> penyanyi}}</p>
+          </div>
         @endforeach
       </div>
     </div>
@@ -115,16 +116,16 @@
       <div class="row">
         <div class="col-md-4">
           <img src="assets/img/dollar.png" class=" d-block mx-auto" alt="">
-          <h4 class="text-center mt-4 font-weight-bold">Harga Terjangkau</h>
+          <h4 class="text-center mt-4 font-weight-bold">Harga Terjangkau</h4>
         </div>
         <div class="col-md-4">
           <img src="assets/img/transaction.png" class=" d-block mx-auto" alt="">
-          <h4 class="text-center mt-4 font-weight-bold">Transaksi Mudah</h>
+          <h4 class="text-center mt-4 font-weight-bold">Transaksi Mudah</h4>
 
         </div>
         <div class="col-md-4">
           <img src="assets/img/secure.png" class=" d-block mx-auto" alt="">
-          <h4 class="text-center mt-4 font-weight-bold">Transaksi Aman</h>
+          <h4 class="text-center mt-4 font-weight-bold">Transaksi Aman</h4>
         </div>
       </div>
 

@@ -7,7 +7,7 @@
 <div class="row">
     <div class="col-md-6">
         <div class="card">
-            <form role="form" action="/album" method="POST">
+            <form role="form" action="/album" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="card-body">
                     <div class="form-group row">
@@ -19,7 +19,7 @@
                                 @endforeach
                             </select>
                         </div>
-                    @error('nama')
+                    @error('pemasok_id')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                     </div>
@@ -51,7 +51,7 @@
                                 </div>
                             </div>
                         </div>
-                    @error('bio')
+                    @error('Harga')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                     </div>
@@ -69,7 +69,7 @@
                         <div class="col-sm-9">
                             <textarea class="form-control" id="deskripsi" name="deskripsi" placeholder="Deskripsi Album"></textarea>
                         </div>
-                    @error('bio')
+                    @error('deskripsi')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                     </div>
