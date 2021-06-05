@@ -1,6 +1,6 @@
 @extends('layout/main');
 
-@section('title','Adress')
+@section('title','Cart')
 
 @section('login')
   <li class="nav-item dropdown mx-md-3 mx-0">

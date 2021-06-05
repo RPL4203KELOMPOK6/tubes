@@ -15,6 +15,7 @@
                         <th style="width: 35%; text-align: center">Nama</th>
                         <th style="text-align: center">Penyanyi</th>
                         <th style="text-align: center">Harga</th>
+                        <th style="text-align: center">Gambar</th>
                         <th style="text-align: center">Deskripsi</th>
                         <th style="text-align: center">Pemasok ID</th>
                         
@@ -26,6 +27,7 @@
                             <td> {{ $album -> nama }} </td>
                             <td> {{ $album  -> penyanyi }} </td>
                             <td> {{ $album  -> harga }} </td>
+                            <td> {{ $album  -> Gambar }} </td>
                             <td> {{ $album  -> deskripsi }} </td>
                             <td> {{ $album  -> pemasok_id }} </td>
                         </tr>
