@@ -45,6 +45,7 @@
         <div class="item hero-img-carousel ">
           <div class="position-relative">
             <!-- GAMBAR -->
+            @foreach ($album as $album)
             <img class="w-100 " src="assets/img/highlight1 1.png" alt="">
             <!-- CAPTION -->
             <p class="text-white carousel-caption font-weight-bold">Lorem ipsum dolor sit amet, consectetur
@@ -91,10 +92,10 @@
       </div>
       <div class="row mt-5">
         <div class="col-md-4">
-          @foreach ($album as $albums)
-          <img src="{{asset('../image/'. $albums->gambar)}}" class="w-100" alt="" onclick="event.preventDefault(); document.getElementById('mentahan/detail_produk').submit();">
-          <h5 class="font-weight-bold mt-4  ml-4" onclick="event.preventDefault(); document.getElementById('detail_produk').submit();">{{ $albums->nama }}</h5>
-          <p class="text-secondary  ml-4">{{$albums->penyanyi}}</p>
+          
+          <img src="{{asset('../image/'. $album->gambar)}}" class="w-100" alt="" onclick="event.preventDefault(); document.getElementById('mentahan/detail_produk').submit();">
+          <h5 class="font-weight-bold mt-4  ml-4" onclick="event.preventDefault(); document.getElementById('detail_produk').submit();">{{ $album->nama }}</h5>
+          <p class="text-secondary  ml-4">{{$album->penyanyi}}</p>
           @endforeach
         </div>
         <div class="col-md-4">
