@@ -1,4 +1,4 @@
-@extends('layout/main');
+@extends('layout/main')
 
 @section('title','Alboem')
 
@@ -99,11 +99,13 @@
           <h5 class="font-weight-bold mt-4  ml-4">Lovesick Girls</h5>
           <p class="text-secondary  ml-4">Blackpink</p>
         </div>
+        @foreach($album as $key => $album)
         <div class="col-md-4">
           <img src="assets/img/examine3.png" class="w-100" alt="">
-          <h5 class="font-weight-bold mt-4  ml-4">Lorem</h5>
-          <p class="text-secondary  ml-4">EXO</p>
+          <h5 class="font-weight-bold mt-4  ml-4" >{{ $album -> nama }}</h5>
+          <p class="text-secondary  ml-4">{{$album -> penyanyi}}</p>
         </div>
+        @endforeach
       </div>
     </div>
   </section>

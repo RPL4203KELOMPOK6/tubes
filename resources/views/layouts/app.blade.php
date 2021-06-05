@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alboem</title>
     <!-- IMPORT JQUERY -->
-    <script src="{{asset('../assets/js/jquery-3.4.1.min.js')}}"></script>
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
     <!-- IMPORT POPPER FOR DROPDOWN NAVBAR -->
-    <script src="{{asset('../assets/js/popper.min.js')}}"></script>
+    <script src="assets/js/popper.min.js"></script>
     <!-- IMPORT POPPER FOR BOOTSTRAP JS NAVBAR -->
-    <script src="{{asset('../assets/js/bootstrap.min.js')}}"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
 
 
     <!-- IMPORT BOOTSTRAP -->
