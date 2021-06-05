@@ -45,15 +45,15 @@ class AlbumController extends Controller
     
     public function store(Request $request)
     {
+        // dd($request->gambar);
         $this->validate($request,[
             'pemasok_id' => 'required',
     		'nama' => 'required',
             'penyanyi' => 'required',
             'harga' => 'required',
-            'gambar' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
+            'gambar' => 'mimes:jpeg,png,jpg|max:2048',
             'deskripsi' => 'required'
     	]);
-
         // menyimpan data file yang diupload ke variabel $file
         $gambar = $request->file('gambar');
  
@@ -112,6 +112,7 @@ class AlbumController extends Controller
             "nama" => $request["nama"],
             "penyanyi" => $request["penyanyi"],
             "harga" => $request["harga"],
+            "gambar" => $request["gambar"],
             "deskripsi" => $request["deskripsi"]
         ]);
 

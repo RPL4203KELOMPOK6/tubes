@@ -33,7 +33,7 @@
                         <td> {{ $album -> nama }} </td>
                         <td> {{ $album -> penyanyi }} </td>
                         <td> {{ $album -> harga }} </td>
-                        <td> {{ $album -> gambar }} </td>
+                        <td> <img class="card-img-top" src="/image/{{ $album -> gambar }}" style="width:200px;height:200px;"> </td>
                         <td> {{ $album -> deskripsi }} </td>
                         <td> {{ $album -> pemasok_id }} </td>
                         <td style="display:flex;">

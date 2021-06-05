@@ -44,6 +44,15 @@
                     @enderror
                     </div>
                     <div class="form-group row">
+                        <label for="gambar" class="col-sm-2 text-right control-label col-form-label">Gambar</label>
+                        <div class="col-sm-9">
+                            <input type="file" name="gambar">
+                        </div>
+                    @error('bio')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+                    </div>
+                    <div class="form-group row">
                         <label for="deskripsi" class="col-sm-2 text-right control-label col-form-label">Deskripsi</label>
                         <div class="col-sm-9">
                             <textarea class="form-control" id="deskripsi" name="deskripsi" value="{{$album->deskripsi}}" placeholder="Deskripsi Album"></textarea>
