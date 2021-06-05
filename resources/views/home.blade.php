@@ -78,48 +78,36 @@
       <h3 class="font-weight-bold pt-5">Rekomendasi Produk</h3>
       <p>Spesial untuk anda</p>
       <div class="primary-bg  border-header mt-3"></div>
-      <div class="row mt-medium">
-        @foreach ($album as $album)
-         <div class="col-md-6">
-           @if ($album->id==9)
-              <img src="{{asset('../image/'. $album->gambar)}}" class="w-100" alt="">
-              <h4 class="font-weight-bold mt-4">{{ $album->nama }}</h4>
-              <p class="text-secondary">{{$album->penyanyi}}</p>
-           @elseif ($album->id==10)
-            <img src="{{asset('../image/'. $album->gambar)}}" class="w-100" alt="">
-            <h4 class="font-weight-bold mt-4">{{ $album->nama }}</h4>
-            <p class="text-secondary">{{$album->penyanyi}}</p>
-           @endif
-           
-        </div>
-        {{-- @break($album->number == 2 ) --}}
-        
-        {{-- <div class="col-md-6 mt-4 mt-md-0">
-          <img src="assets/img/Image-1.png" class="w-100" alt="">
-          <h4 class="font-weight-bold mt-4">Billie ellish</h4>
-          <p class="text-secondary">Lorem ipsum de amet</p>
-        </div> --}}
-      </div>
+          <div class="row mt-medium">
+            
+                {{-- <div class="col-md-6">
+                    <img src="{{asset('../image/'. $album->gambar)}}" class="w-100" alt="">
+                    <h4 class="font-weight-bold mt-4">{{ $album->nama }}</h4>
+                    <p class="text-secondary">{{$album->penyanyi}}</p>
+                    
+                </div> --}}
+              
+            {{-- @break($album->number == 2 ) --}}
+            
+            {{-- <div class="col-md-6 mt-4 mt-md-0">
+              <img src="assets/img/Image-1.png" class="w-100" alt="">
+              <h4 class="font-weight-bold mt-4">Billie ellish</h4>
+              <p class="text-secondary">Lorem ipsum de amet</p>
+            </div> --}}
+          </div>
+          
       <div class="row mt-5">
-        @continue
-        <div class="col-md-4">
+        @foreach ($album as $album)
+        @if ($album->number<=13)
+        <div class="col-md-4" >
           <img src="{{asset('../image/'. $album->gambar)}}" class="w-100" alt="" onclick="event.preventDefault(); document.getElementById('mentahan/detail_produk').submit();">
           <h5 class="font-weight-bold mt-4  ml-4" onclick="event.preventDefault(); document.getElementById('detail_produk').submit();">{{ $album->nama }}</h5>
           <p class="text-secondary  ml-4">{{$album->penyanyi}}</p>
-          
-        </div>
-        {{-- <div class="col-md-4">
-          <img src="assets/img/examine2.png" class="w-100" alt="">
-          <h5 class="font-weight-bold mt-4  ml-4">Lovesick Girls</h5>
-          <p class="text-secondary  ml-4">Blackpink</p>
-        </div>
-        <div class="col-md-4">
-          <img src="assets/img/examine3.png" class="w-100" alt="">
-          <h5 class="font-weight-bold mt-4  ml-4">Lorem</h5>
-          <p class="text-secondary  ml-4">EXO</p>
-        </div> --}}
+        </div> 
+        @endif
+        @endforeach
       </div>
-      @endforeach
+      
     </div>
   </section>
   <section class="pt-5">
