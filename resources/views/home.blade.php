@@ -90,23 +90,22 @@
       </div>
       <div class="row mt-5">
         @foreach($album as $abum)
-          <div class="col-md-4">
-            <img src="/image/{{ $album -> gambar }}" class="w-100" alt="">
-            <h5 class="font-weight-bold mt-4  ml-4" >{{ $album -> nama }}</h5>
-            <p class="text-secondary  ml-4">{{$album -> penyanyi}}</p>
-          </div>
-          <div class="col-md-4">
-            <img src="/image/{{ $album -> gambar }}" class="w-100" alt="">
-            <h5 class="font-weight-bold mt-4  ml-4">{{ $album -> nama }}</h5>
-            <p class="text-secondary  ml-4">{{$album -> penyanyi}}</p>
-          </div>
-          @foreach($album as $key => $album)
-          <div class="col-md-4">
-            <img src="/image/{{ $album -> gambar }}" class="w-100" alt="">
-            <h5 class="font-weight-bold mt-4  ml-4" >{{ $album -> nama }}</h5>
-            <p class="text-secondary  ml-4">{{$album -> penyanyi}}</p>
-          </div>
+        <div class="col-md-4">
+          <img src="{{asset('../image/'. $album -> gambar)}}" class="w-100" alt="">
+          <h5 class="font-weight-bold mt-4  ml-4" >{{ $album -> nama }}</h5>
+          <p class="text-secondary  ml-4">{{$album -> penyanyi}}</p>
+        </div>
         @endforeach
+        <div class="col-md-4">
+          <img src="assets/img/examine2.png" class="w-100" alt="">
+          <h5 class="font-weight-bold mt-4  ml-4">Lovesick Girls</h5>
+          <p class="text-secondary  ml-4">Blackpink</p>
+        </div>
+        <div class="col-md-4">
+          <img src="assets/img/examine3.png" class="w-100" alt="">
+          <h5 class="font-weight-bold mt-4  ml-4">Lorem</h5>
+          <p class="text-secondary  ml-4">EXO</p>
+        </div>
       </div>
     </div>
   </section>
