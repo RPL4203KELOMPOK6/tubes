@@ -37,6 +37,12 @@ class AlbumController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    public function upload(){
+        $gambar = Album::get();
+        return view('index',['gambar' => $gambar]);
+    }
+    
     public function store(Request $request)
     {
         $this->validate($request,[
@@ -123,6 +129,8 @@ class AlbumController extends Controller
         Album::destroy($id);
         return redirect('/album')->with('success', 'Data sukses dihapus');
     }
+
+    
  
 
 }
