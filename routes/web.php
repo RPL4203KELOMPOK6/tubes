@@ -41,3 +41,7 @@ Route::get('/pesanan', function () {
 Route::get('/transaksi', function () {
     return view('Mentahan.transaksi');
 });
+
+Route::get('/address', function () {
+    return view('Mentahan.address');
+});

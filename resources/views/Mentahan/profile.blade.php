@@ -1,6 +1,6 @@
 @extends('layout/main')
 
-@section('title','Adress')
+@section('title','Ubah Profil')
 
 @section('login')
   <li class="nav-item dropdown mx-md-3 mx-0">
@@ -76,8 +76,46 @@
                             <dd class="col-md-3"><span class="ml-4">Tanggal Lahir</span></dd>
                             <dd class="col-md-9"><span class="ml-4 ml-md-0">:</span></dd>
                         </dl>
-                        <button class="btn primary-bg text-white  d-block ml-auto  mr-4  font-weight-bold"> Ubah
-                            Profil</button>
+                        <button type="button" class="btn primary-bg text-white  d-block ml-auto  mr-4  font-weight-bold"
+                            data-toggle="modal" data-target="#modalprofil"
+                        >UbahProfil</button>
+
+                        <div class="modal fade" id="modalprofil" role="dialog" arialabelledby="modalLabel" aria-hidden="true"> 
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Edit Profil Anda</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Nama</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Email</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>No Hp</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Tanggal Lahir</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="reset" class="btn btn-danger">Reset</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="profile-data bg-white pb-3 mt-5">
                         <div class="data-header py-3 px-2 ">
@@ -94,12 +132,46 @@
                             <p class="content data ml-4">085262947577</p>
                         </div>
                         </div>
-                        <button class="btn primary-bg text-white  d-block ml-auto  mr-4  font-weight-bold"> Ubah
-                           </button>
-                    </div>
-                    <a href="address.html">
-                        <button class="btn add-address-bg mt-3 text-white font-weight-bold d-block mx-auto mx-md-0"> Tambah Alamat Baru </button>
+                        <button type="button" class="btn primary-bg text-white  d-block ml-auto  mr-4  font-weight-bold"
+                            data-toggle="modal" data-target="#modalAlamat"
+                        >Ubah</button>
 
+                        <div class="modal fade" id="modalAlamat" role="dialog" arialabelledby="modalLabel" aria-hidden="true"> 
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Edit Alamat Anda</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Nama Penerima</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>No HP</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Alamat Anda</label>
+                                                <textarea class="form-control" rows="5"></textarea>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="reset" class="btn btn-danger">Reset</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a href="/address">
+                        <button class="btn add-address-bg mt-3 text-white font-weight-bold d-block mx-auto mx-md-0"> Tambah Alamat Baru </button>
                     </a>
 
                 </div>
@@ -122,5 +194,5 @@
         </div>
     </div>
     </section>
-    <script src="assets/js/main.js"></script>
+
 @endsection
