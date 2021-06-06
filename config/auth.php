@@ -46,6 +46,17 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+
+        'pemasok' => [
+            'driver' => 'session',
+            'provider' => 'pemasok',
+        ],
+
+        'pemaosk-api' => [
+            'driver' => 'token',
+            'provider' => 'pemasok',
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -69,6 +80,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+
+        'pemasok' => [
+            'driver' => 'eloquent',
+            'model' => App\Pemasok::class,
         ],
 
         // 'users' => [

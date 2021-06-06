@@ -42,7 +42,11 @@
         <div class="col-md-8 my-auto">
             <div class="w-50 m-auto">
                 <h3 class="header-color form-font font-weight-lighter">Sign In To Alboem</h3>
-            <form method="POST" action="{{ route('login') }}">
+            @isset($url)
+            <form method="POST" action='{{ url("login/$url") }}' aria-label="{{ __('Login') }}">
+            @else
+            <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
+            @endisset
             @csrf
                 <div class="form-group">
                     <label for="exampleInputEmail1" class="email-label">Email address</label>

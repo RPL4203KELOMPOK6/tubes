@@ -22,6 +22,9 @@ class RedirectIfAuthenticated
             return redirect(RouteServiceProvider::HOME);
         }
 
+        if ($guard == "pemasok" && Auth::guard($guard)->check()) {
+            return redirect('/pemasok');
+        }
         return $next($request);
     }
 }

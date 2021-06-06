@@ -1,4 +1,4 @@
-@extends('home.pemasok')
+@extends('home.admin')
 
 @section('content')
 <div class="card-header">
@@ -27,7 +27,7 @@
                             <td> {{ $album -> nama }} </td>
                             <td> {{ $album  -> penyanyi }} </td>
                             <td> {{ $album  -> harga }} </td>
-                            <td> {{ $album  -> gambar }} </td>
+                            <td> {{ $album  -> Gambar }} </td>
                             <td> {{ $album  -> deskripsi }} </td>
                             <td> {{ $album  -> pemasok_id }} </td>
                         </tr>

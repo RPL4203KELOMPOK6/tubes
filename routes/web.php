@@ -15,13 +15,24 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/coba', function () {
-    return view('home.coba');
-});
+// Route::resource('admin/pemasok', 'CpemasokController');
+// ROUTER ADMIN KE DETAIL PEMASOK
 
-Route::resource('pemasok', 'PemasokController');
+Route::get('/admin', function () {
+    return view('admin.main');
+});
+Route::get('/admin/createpemasok', 'CpemasokController@create');
+Route::get('/admin/datapemasok', 'CpemasokController@index');
+Route::post('/admin/datapemasok', 'CpemasokController@store');
+Route::get('/admin/datapemasok/{id}', 'CpemasokController@show');
+Route::delete('/admin/datapemasok/{id}', 'CpemasokController@destroy');
+
+
 Route::resource('album', 'AlbumController');
- 
+Route::get('/admin/dataalbum', 'AlbumController@index2');
+Route::get('/admin/dataalbum/{id}', 'AlbumController@show2');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -45,3 +56,8 @@ Route::get('/transaksi', function () {
 Route::get('/address', function () {
     return view('Mentahan.address');
 });
+
+// Route::get('/login/pemasok', 'Auth\LoginController@showPemasokLoginForm');
+// Route::post('/login/pemasok', 'Auth\LoginController@pemasokLogin');
+// Route::view('/home/pemasok', 'pemasok');
+// Route::view('/home', 'home')->middleware('auth');

@@ -136,7 +136,18 @@ class AlbumController extends Controller
         return redirect('/album')->with('success', 'Data sukses dihapus');
     }
 
-    
+    //UNTUK ADMIN
+    public function index2()
+    {
+        $album = Album::all();
+        return view('admin.aindex', compact('album'));
+    }
+
+    public function show2($id)
+    {
+        $album = Album::find($id);
+        return view('admin.ashow', compact('album'));
+    }
  
 
 }
