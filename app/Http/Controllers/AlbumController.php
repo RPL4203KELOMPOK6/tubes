@@ -9,6 +9,68 @@ use App\Album;
 
 class AlbumController extends Controller
 {
+    //UNTUK ADMIN
+    public function index2()
+    {
+        $album = Album::all();
+        return view('admin.aindex', compact('album'));
+    }
+    
+    public function create2()
+    {
+        $pemasok = Pemasok::all();
+        return view('admin.acreate')->with('pemasok',$pemasok);
+    }
+    
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    
+    public function upload2(){
+        $gambar = Album::get();
+        return view('index',['gambar' => $gambar]);
+    }
+    
+    public function store2(Request $request)
+    {
+        // dd($request->gambar);
+        $this->validate($request,[
+            'pemasok_id' => 'required',
+            'nama' => 'required',
+            'penyanyi' => 'required',
+            'harga' => 'required',
+            'gambar' => 'mimes:jpeg,png,jpg|max:5048',
+            'deskripsi' => 'required'
+        ]);
+        // menyimpan data file yang diupload ke variabel $file
+        $gambar = $request->file('gambar');
+    
+        $nama_file = time()."_".$gambar->getClientOriginalName();
+    
+        // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = 'image';
+        $gambar->move($tujuan_upload,  $nama_file);
+    
+        Album::create([
+            'pemasok_id' => $request->pemasok_id,
+            'nama' => $request->nama,
+            'penyanyi' => $request->penyanyi,
+            'harga' => $request->harga,
+            'gambar' => $nama_file,
+            'deskripsi' => $request->deskripsi
+        ]);
+    
+        return redirect('admin/dataalbum');
+    }
+    
+    public function show2($id)
+    {
+        $album = Album::find($id);
+        return view('admin.ashow', compact('album'));
+    }
     /**
      * Display a listing of the resource.
      *
@@ -136,18 +198,6 @@ class AlbumController extends Controller
         return redirect('/album')->with('success', 'Data sukses dihapus');
     }
 
-    //UNTUK ADMIN
-    public function index2()
-    {
-        $album = Album::all();
-        return view('admin.aindex', compact('album'));
-    }
-
-    public function show2($id)
-    {
-        $album = Album::find($id);
-        return view('admin.ashow', compact('album'));
-    }
  
 
 }

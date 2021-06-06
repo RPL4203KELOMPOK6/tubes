@@ -33,8 +33,8 @@
                         <td> {{ $album -> pemasok_id }} </td>
                         <td style="display:flex;">
                             <a href="/admin/dataalbum/{{$album->id}}" class="btn btn-info btn-sm">show</a>
-                            <a href="/album/{{$album->id}}/edit" class="btn btn-default btn-sm">edit</a> 
-                            <form action="/album/{{$album->id}}" method="post">
+                            <a href="/admin/dataalbum/{{$album->id}}/edit" class="btn btn-default btn-sm">edit</a> 
+                            <form action="/admin/dataalbum/{{$album->id}}" method="post">
                             {{ csrf_field() }}
                             @method('DELETE')
                                 <input type="submit" value="delete" class="btn btn-danger btn-sm">

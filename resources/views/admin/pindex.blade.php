@@ -32,7 +32,7 @@
                                 <td> {{ $pemasok -> phone }} </td>
                                 <td style="display:flex;">
                                     <a href="/admin/datapemasok/{{$pemasok->id}}" class="btn btn-info btn-sm">show</a>
-                                    <a href="admin/datapemasok/{{$pemasok->id}}/edit" class="btn btn-default btn-sm">edit</a> 
+                                    <a href="/admin/datapemasok/{{$pemasok->id}}/edit" class="btn btn-default btn-sm">edit</a> 
                                     <form action="/admin/datapemasok/{{$pemasok->id}}" method="post">
                                     {{ csrf_field() }}
                                     @method('DELETE')

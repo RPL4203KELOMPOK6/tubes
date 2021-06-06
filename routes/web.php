@@ -28,9 +28,12 @@ Route::get('/admin/datapemasok/{id}', 'CpemasokController@show');
 Route::delete('/admin/datapemasok/{id}', 'CpemasokController@destroy');
 
 
-Route::resource('album', 'AlbumController');
+// Route::resource('album', 'AlbumController');
+Route::get('/admin/createalbum', 'AlbumController@create2');
 Route::get('/admin/dataalbum', 'AlbumController@index2');
+Route::post('/admin/datapemasok', 'AlbumController@store2');
 Route::get('/admin/dataalbum/{id}', 'AlbumController@show2');
+Route::delete('/admin/dataalbum/{id}', 'CpemasokController@destroy');
 
 
 Auth::routes();

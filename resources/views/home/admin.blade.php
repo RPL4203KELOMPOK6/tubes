@@ -9,7 +9,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
     <title>Admin</title>
     <!-- Custom CSS -->
     <link href="../../assets/libs/flot/css/float-chart.css" rel="stylesheet">
@@ -39,7 +38,7 @@
                     <!-- ============================================================== -->
                     <!-- Logo -->
                     <!-- ============================================================== -->
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="/admin">
                         <!-- Logo icon -->
                         <b class="logo-icon p-1-10">
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
@@ -213,7 +212,7 @@
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-apps"></i><span class="hide-menu">Album </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="/album/create" class="sidebar-link"><i class="mdi mdi-account-plus"></i><span class="hide-menu"> Add </span></a></li>
+                                <li class="sidebar-item"><a href="/admin/createalbum" class="sidebar-link"><i class="mdi mdi-account-plus"></i><span class="hide-menu"> Add </span></a></li>
                                 <li class="sidebar-item"><a href="/admin/dataalbum" class="sidebar-link"><i class="mdi mdi-folder"></i><span class="hide-menu"> Show Data </span></a></li>
                             </ul>
                         </li>
@@ -272,7 +271,7 @@
             <!-- footer -->
             <!-- ============================================================== -->
             <footer class="footer text-center">
-                All Rights Reserved by Matrix-admin. Designed and Developed by <a href="https://alboem.com">Alboem</a>.
+                All Rights Reserved by Alboem. Designed and Developed by <a href="https://alboem.com">Alboem</a>.
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
