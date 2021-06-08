@@ -31,7 +31,7 @@ Route::delete('/admin/datapemasok/{id}', 'CpemasokController@destroy');
 // Route::resource('album', 'AlbumController');
 Route::get('/admin/createalbum', 'AlbumController@create2');
 Route::get('/admin/dataalbum', 'AlbumController@index2');
-Route::post('/admin/datapemasok', 'AlbumController@store2');
+Route::post('/admin/dataalbum', 'AlbumController@store2');
 Route::get('/admin/dataalbum/{id}', 'AlbumController@show2');
 Route::delete('/admin/dataalbum/{id}', 'CpemasokController@destroy');
 
@@ -46,6 +46,10 @@ Route::get('/profile', function () {
 
 Route::get('/cart', function () {
     return view('Mentahan.cart');
+});
+
+Route::get('/detail_produk', function () {
+    return view('Mentahan.detail_produk');
 });
 
 Route::get('/pesanan', function () {

@@ -101,7 +101,7 @@
         @if ($album->number<=13)
         <div class="col-md-4" >
           <img src="{{asset('../image/'. $album->gambar)}}" class="w-100" alt="" onclick="event.preventDefault(); document.getElementById('mentahan/detail_produk').submit();">
-          <h5 class="font-weight-bold mt-4  ml-4" onclick="event.preventDefault(); document.getElementById('detail_produk').submit();">{{ $album->nama }}</h5>
+          <h5 class="font-weight-bold mt-4  ml-4" ><a href="/detail_produk">{{ $album->nama }}</a></h5>
           <p class="text-secondary  ml-4">{{$album->penyanyi}}</p>
         </div> 
         @endif

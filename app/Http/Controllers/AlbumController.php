@@ -63,7 +63,7 @@ class AlbumController extends Controller
             'deskripsi' => $request->deskripsi
         ]);
     
-        return redirect('admin/dataalbum');
+        return redirect('/admin/dataalbum');
     }
     
     public function show2($id)

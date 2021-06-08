@@ -42,7 +42,7 @@
               <div class="mt-3 border-content pt-4  w-responsive-75">
                 <form action="" class="d-flex">
                   <input value="1" type="number" class="qty-form text-center">
-                  <button class="btn primary-bg text-white ml-3 font-weight-bold">Tambah Ke Keranjang</button>
+                  <button class="btn primary-bg text-white ml-3 font-weight-bold"><a href="/cart"></a>Tambah Ke Keranjang</button>
                 </form>
               </div>
               <h5 class="text-red font-weight-bold cursor-pointer"><i class="fas fa-heart mr-3"></i>Add to Wishlist</h5>

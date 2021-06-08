@@ -7,7 +7,7 @@
 <div class="row">
     <div class="col-md-6">
         <div class="card">
-            <form role="form" action="/pemasok" method="POST">
+            <form role="form" action="/admin" method="POST">
                 {{ csrf_field() }}
                 <div class="card-body">
                     <div class="form-group row">

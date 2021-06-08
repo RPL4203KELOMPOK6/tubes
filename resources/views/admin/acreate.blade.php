@@ -7,7 +7,7 @@
 <div class="row">
     <div class="col-md-6">
         <div class="card">
-            <form role="form" action="admin/dataalbum" method="POST" enctype="multipart/form-data">
+            <form role="form" action="/admin/dataalbum" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="card-body">
                     <div class="form-group row">
